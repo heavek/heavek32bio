@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000;
+  --foreground: #fff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-playfair), Georgia, serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--background); color: var(--foreground); }
+* { -webkit-font-smoothing: antialiased; }
+
+/* ── glitch ─────────────────────────────────────────────────── */
+@keyframes glitchA {
+  0%,  79%, 100% { clip-path: inset(0 0 100% 0); transform: translateX(0); }
+  80%             { clip-path: inset(36% 0 52% 0); transform: translateX(-6px) skewX(-2deg); }
+  82%             { clip-path: inset(5%  0 81% 0); transform: translateX(6px)  skewX(2deg);  }
+  84%             { clip-path: inset(60% 0 28% 0); transform: translateX(-3px); }
+  86%             { clip-path: inset(0 0 100% 0);  transform: translateX(0); }
+}
+@keyframes glitchB {
+  0%,  87%, 100% { clip-path: inset(0 0 100% 0); transform: translateX(0); }
+  88%             { clip-path: inset(74% 0 10% 0); transform: translateX(5px) skewX(-1.5deg); }
+  90%             { clip-path: inset(18% 0 66% 0); transform: translateX(-5px) skewX(1.5deg); }
+  92%             { clip-path: inset(0 0 100% 0);  transform: translateX(0); }
+}
+
+/* ── grain ──────────────────────────────────────────────────── */
+@keyframes grain {
+  0%,100% { transform: translate(0%,0%);   }
+  10%     { transform: translate(-2%,-3%); }
+  20%     { transform: translate(3%,2%);   }
+  30%     { transform: translate(-1%,4%);  }
+  40%     { transform: translate(2%,-1%);  }
+  50%     { transform: translate(-3%,3%);  }
+  60%     { transform: translate(2%,-2%);  }
+  70%     { transform: translate(1%,3%);   }
+  80%     { transform: translate(-2%,1%);  }
+  90%     { transform: translate(3%,-3%);  }
+}
+.film-grain {
+  position: fixed; top: -100%; left: -100%;
+  width: 400%; height: 400%;
+  pointer-events: none; z-index: 100; opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  animation: grain 0.2s steps(1) infinite;
+}
+
+/* ── misc ───────────────────────────────────────────────────── */
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+@keyframes scanline {
+  0%   { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh);  }
+}
