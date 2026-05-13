@@ -175,16 +175,16 @@ function HeroSection() {
 
       {/* Content */}
       <motion.div
-        className="relative z-[10] flex flex-col items-center gap-10 text-center px-6"
+        className="relative z-[10] flex flex-col items-center gap-10 text-center px-6 w-full overflow-hidden"
         style={{ opacity: contentOpacity, y: contentY }}
       >
         <motion.h1
-          className="leading-none uppercase"
+          className="leading-none uppercase w-full"
           style={{
-            fontSize:      "clamp(4rem, 20vw, 17rem)",
+            fontSize:      "clamp(2rem, 11vw, 10rem)",
             fontFamily:    SERIF,
             fontWeight:    900,
-            letterSpacing: "0.18em",
+            letterSpacing: "0.12em",
             color:         PINK,
           }}
           initial={{ opacity: 0, y: 50 }}

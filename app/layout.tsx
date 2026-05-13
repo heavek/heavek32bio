@@ -15,8 +15,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "DIMA",
-  description: "Те, кто смиряются со злом — сами становятся частью зла.",
+  title: "heavek",
+  description: "matadora aura.",
 };
 
 export default function RootLayout({
