@@ -26,9 +26,9 @@ const DATA = {
   ],
   terminal: [
     { kind: "sys" as const, text: "// interests.sys — loaded" },
-    { kind: "ok"  as const, text: "Dota 2        Active" },
-    { kind: "ok"  as const, text: "Rust          Farming" },
-    { kind: "ok"  as const, text: "Minecraft     Technical Building" },
+    { kind: "ok"  as const, text: "Dota 2        matadora" },
+    { kind: "ok"  as const, text: "Rust          matadora" },
+    { kind: "ok"  as const, text: "Minecraft     matadora" },
     { kind: "dim" as const, text: "> _" },
   ],
 };
@@ -58,10 +58,10 @@ const SOCIALS = [
 ] as const;
 
 const MESSAGES = [
-  { side: "left"  as const, text: "gg bro" },
-  { side: "right" as const, text: "gg" },
+  { side: "left"  as const, text: "привет гей" },
+  { side: "right" as const, text: "привет пидор" },
   { side: "left"  as const, text: "топ катка была" },
-  { side: "right" as const, text: "факт. заходи ещё" },
+  { side: "right" as const, text: "факт соси член" },
   { side: "left"  as const, text: "обязательно" },
 ];
 
